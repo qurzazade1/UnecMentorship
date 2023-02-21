@@ -1,0 +1,17 @@
+int[,] mynumbers = { { 1, 2, 3, 4, 5, 6 }, { 7,8,1,2,3,4} };
+            int sum = 0;
+           
+
+            for (int c = 0; c <mynumbers.GetLength(0); c++)
+            {
+                for (int d = 0; d <mynumbers.GetLength(1); d++)
+                {
+
+                    sum = sum + mynumbers[c,d];
+                    Console.WriteLine(sum);
+                }
+                
+            }
+
+
+            Console.ReadLine();
