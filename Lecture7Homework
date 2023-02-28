@@ -1,32 +1,40 @@
 MinMax2DimArray.cs
 
-public class MinMax2DimArray
+ public class MinMax2DimArray
     {
-        public int FindMaxElement(int[] nums)
+        public int FindMaxElement(int[,] nums)
         {
             int max = 0;
-            for (int i=0; i<nums.Length; i++)
+            for (int i=0; i<nums.GetLength(0); i++)
             {
-                if (max < nums[i])
+                for (int ii = 0; ii < nums.GetLength(1); ii++)
                 {
-                    max = nums[i];
+
+                    if (max < nums[i,ii])
+                    {
+                        max = nums[i,ii];
+                    }
                 }
             }
             return max;
         }
-        public int FindMinElement(int min,int[] nums) 
+        public int FindMinElement(int min,int[,] nums) 
         {
-         for (int i=0; i<nums.Length; i++)
-            {
-                if (min > nums[i]) 
-                { 
-                
-                min = nums[i];
-                
+            for (int i = 0; i < nums.GetLength(0); i++)
+                for (int ii = 0; ii < nums.GetLength(1); ii++)
+                {
+                    if (min > nums[i,ii])
+                    {
+
+                        min = nums[i,ii];
+
+                    }
                 }
-            }
             return min;
         }
+          
+        }
+    }
         
         
         
@@ -81,13 +89,13 @@ public class MinMax2DimArray
             //Also with another method the max element of 2 dim.array
             // The method type should be int
 
-            MinMax2DimArray MinimumElement = new MinMax2DimArray();
+             MinMax2DimArray MinimumElement = new MinMax2DimArray();
 
-            int FindingMinimum = MinimumElement.FindMinElement(12, new[] { 1, 2, 3, 4, 5 });
+            int FindingMinimum = MinimumElement.FindMinElement(12, new[,] { { 1, 2, 3, 4, 5 } ,{ 3,2,22,43,67} });
             Console.WriteLine(FindingMinimum);
 
             MinMax2DimArray MaximumElement = new MinMax2DimArray();
-            int FindingMaximum = MinimumElement.FindMaxElement(new[] { 4, 5, 6, 7, 9, 18 });
+            int FindingMaximum = MinimumElement.FindMaxElement(new[,] { { 4, 5, 6, 7, 9, 18 }, {12,21,10,2,6,56 } });
             Console.WriteLine(FindingMaximum);
 
             /*
