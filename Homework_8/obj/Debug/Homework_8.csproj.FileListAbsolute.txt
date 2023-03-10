@@ -1,0 +1,8 @@
+C:\Users\zgarayeva\Desktop\Learning C#\Homework_8\Homework_8\bin\Debug\Homework_8.exe.config
+C:\Users\zgarayeva\Desktop\Learning C#\Homework_8\Homework_8\bin\Debug\Homework_8.exe
+C:\Users\zgarayeva\Desktop\Learning C#\Homework_8\Homework_8\bin\Debug\Homework_8.pdb
+C:\Users\zgarayeva\Desktop\Learning C#\Homework_8\Homework_8\obj\Debug\Homework_8.csproj.AssemblyReference.cache
+C:\Users\zgarayeva\Desktop\Learning C#\Homework_8\Homework_8\obj\Debug\Homework_8.csproj.SuggestedBindingRedirects.cache
+C:\Users\zgarayeva\Desktop\Learning C#\Homework_8\Homework_8\obj\Debug\Homework_8.csproj.CoreCompileInputs.cache
+C:\Users\zgarayeva\Desktop\Learning C#\Homework_8\Homework_8\obj\Debug\Homework_8.exe
+C:\Users\zgarayeva\Desktop\Learning C#\Homework_8\Homework_8\obj\Debug\Homework_8.pdb
