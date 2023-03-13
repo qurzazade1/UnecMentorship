@@ -1,0 +1,23 @@
+//task 1:
+            int x = 5, y = 6, z = 7;
+            Console.WriteLine((x+y)*z);
+            Console.WriteLine((x * y)+ (y* z));
+
+
+            //task 2:
+            int[] array1 = { 1, 2, 6 };
+            int[] array2 = { 3, 9, 8 };
+            for (int k=0;k<array1.Length;k++)
+            { 
+                int jj = array1[k] * array2[k];
+                Console.WriteLine(jj);
+            }
+            //task 3:
+            string name = "WWW.abb-az";
+            char w = 'W';
+            bool www;
+            if ( name[0] == w && name[1] == w && name[2] == w)
+            {
+                www= true;
+                Console.WriteLine(www);
+            }

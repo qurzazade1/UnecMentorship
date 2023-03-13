@@ -1,0 +1,54 @@
+static void Main(string[] args)
+        {
+            string result1 = PrintPower("Olivia");   //1
+            Console.WriteLine( result1);
+
+            bool result2 = Printboolean("Mahammadali");    //2
+            Console.WriteLine( result2);
+
+             PrintCapitalandLength(); //3
+
+           /* PrintCountries("Russia", "Turkey", "Malta", "Italy", "Norway", "Swedeen", "Switzerland", "Denmark");*/
+            
+            Console.ReadLine();
+        }
+
+        public static string PrintPower (string name)   // homework#1
+        {
+          double power= Math.Pow(name.Length, 2);
+           return power.ToString();
+
+        }
+
+        public static bool Printboolean (string name)  //homework#2
+        {
+            if (name.Length > 10)
+                return true;
+            else
+                return false;
+        }
+
+
+        public static void PrintCapitalandLength( )  //Homework#3
+        {
+            string name = Console.ReadLine();
+            switch (name) 
+            {
+                case "Azerbaijan":
+                    Console.WriteLine($"Capital of Azerbaijan is Baku and length is {name.Length}");
+                    break;
+                case "Russia":
+                    Console.WriteLine($"Capital of Russia is Moscow and length is {name.Length}");
+                    break;
+                case "Turkey":
+                    Console.WriteLine($"Capital of Turkey is Ankara and length is {name.Length}");
+                    break;
+                case "Italy":
+                    Console.WriteLine($"Capital of Italy is Rome and length is {name.Length}");
+                    break;
+                case "Madagaskar":
+                    Console.WriteLine($"Capital of Madagaskar is Antananarivu and length is {name.Length}");
+                    break;
+
+
+            }

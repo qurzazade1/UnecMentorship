@@ -1,0 +1,59 @@
+ //Simple Get request
+             var Client = new HttpClient();
+             var result = await Client.GetStringAsync("http://webcode.me");
+             Console.WriteLine(result);
+
+
+             // Simple Head request
+             var url = "http://webcode.me";
+             var client1 = new HttpClient();
+             var result1= await Client.SendAsync(new HttpRequestMessage (HttpMethod.Head, url));
+             Console.WriteLine(result1);
+             //These are the header fields of the response.
+
+
+
+             //The User-Agent request header is a string that lets servers and network peers
+             //identify the application, operating system, vendor, and/or version of the requesting user agent.
+             var url2 = "http://webcode.me/ua.php";
+             var client2 = new HttpClient();
+             client2.DefaultRequestHeaders.Add("Accept", "application/json");
+             var result3= await client2.GetStringAsync (url2);
+             Console.WriteLine(result3);
+
+            //In the example, we manually build the request message
+             var url3 = "http://webcode.me";
+
+          var client3 = new HttpClient();
+
+             var msg = new HttpRequestMessage(HttpMethod.Get, url3);
+             msg.Headers.Add("User-Agent", "C# Program");
+             var res = await client3.SendAsync(msg);
+
+             var content = await res.Content.ReadAsStringAsync();
+
+             Console.WriteLine(content);
+
+
+
+            //Query string is a part of the URL which is used to add some data to the request for the resource.
+            //It is often a sequence of key/value pairs. It follows the path and starts with the ? character.
+
+            var u = "http://webcode.me/qs.php";
+
+          var client4 = new HttpClient();
+
+            var builder = new UriBuilder(u);
+            builder.Query = "name=John Doe&occupation=gardener";
+            var url4 = builder.ToString();
+
+            var result4 = await client4.GetAsync(url4);
+
+            var content1 = await result4.Content.ReadAsStringAsync();
+            Console.WriteLine(content1);
+
+
+            // To set http timeout
+            var httpClient = new HttpClient();  
+            httpClient.Timeout=TimeSpan.FromSeconds(5);
+            Console.ReadLine();

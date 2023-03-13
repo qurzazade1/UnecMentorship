@@ -1,0 +1,23 @@
+static void Main(string[] args)
+        {             
+            
+            TASK:
+
+            int sum = 0;
+            Console.WriteLine("Please enter the number of element you want for your array:");
+            int c = Convert.ToInt32(Console.ReadLine());
+            int[] numbers = new int[c];
+            Console.WriteLine("Now please enter numbers of your array:");
+            for (int n=0; n <c; n++)
+            {
+                Console.Write ("element: {0} ", n);
+                numbers[n] = Convert.ToInt32(Console.ReadLine());
+                if (numbers[n] % 2 !=0)
+                {
+                   sum+= numbers[n];
+                }
+            }
+            Console.WriteLine($"The sum of odd elements is: {sum}");     
+            Console.ReadLine();
+
+        }

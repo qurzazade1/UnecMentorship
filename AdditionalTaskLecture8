@@ -1,0 +1,19 @@
+ // Comparition of 2 array elements
+ 
+ int[,] myarray1 = { { 3, 4 }, { 7, 8 } };
+            int[,] myarray2 = { { 3, 4 }, { 7, 8 } };
+            bool sameArrayElements;
+            for (int k=0; k<myarray1.GetLength(0); k++)
+            {
+                for (int kk=0; kk<myarray1.GetLength(1); kk++)
+                {
+                    if (myarray1[k, kk] == myarray2[k,kk])
+                    {
+                         sameArrayElements = true;
+                        Console.WriteLine(sameArrayElements); break;
+
+                    }
+                   
+
+                }
+            }

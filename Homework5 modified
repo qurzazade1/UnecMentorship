@@ -1,0 +1,29 @@
+static void Main(string[] args) 
+        {
+           
+            int[] ages = new int[] { 1, 2,3 };  
+            Console.WriteLine(ages.Length);
+
+
+            int i = 0;  // Task1 : initilize an array with 10 elements later
+            int c = 23;           //add your age to each element and print out each element
+            int[] ages2 = new int[10];
+            ages2 = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            while (i < ages2.Length)
+            {
+                Console.WriteLine(ages2[i] + c);
+                i++;
+            }
+
+            //initialize an array with 15 elements , find the sum of odd numbers
+            int[] mynumbers = new int[15];     //task2
+            int sum = 0;
+            mynumbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+            for (int a = 1; a <= mynumbers.Length; a+=2)
+            { 
+                sum += a;
+                
+            }
+            Console.WriteLine(sum);
+            Console.ReadLine();
+        }
