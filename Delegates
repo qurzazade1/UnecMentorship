@@ -1,0 +1,95 @@
+amespace Delegate2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            MyDelegate del = MethodA;
+            del("Hello there");
+
+            InvokeDelegate(del);
+
+            MyDelegate2 del2 = ClassB.MethodB;
+            del2(" Hey how are you?");
+
+            MyDelegate2 del3= ClassC.MethodC;
+            del3(" I am fine as well, thanks");
+
+            MyDelegate2 del4=del2+del3;  // multicast delegate- combines del2 and del3
+            del4=del4-del2;  //removes del2
+            del4(" Perfect");
+
+            MyDelegate3 del5=ClassD.MethodD;
+            MyDelegate3 del6=ClassE.MethodE;
+            //MyDelegate3 del7= del6+del5; //last assigned target method's value will be return
+            Console.WriteLine(del6());
+
+            add<int> del8 = Sum;
+            Console.WriteLine(Sum(10,20));
+            add<string> del9 = Concat;
+            Console.WriteLine(Concat("Mom"," and Dad"));
+            Console.ReadLine();
+
+            
+        }
+
+        static void MethodA(string msg)
+        {
+            Console.WriteLine(msg);
+        }
+
+        static void InvokeDelegate(MyDelegate del) 
+        {
+            del("and hello world");
+
+            
+        }
+
+        static int Sum(int a,int b)
+        { 
+            return a + b; 
+        }   
+
+        static string Concat (string a, string b)
+        {
+            return a + b;   
+        }
+    }
+
+    public delegate void MyDelegate(string msg);
+    public delegate void MyDelegate2(string msg);   
+    public delegate int MyDelegate3();   
+
+    public delegate T add <T>(T param1, T param2);  //generic Delegate
+    class ClassB
+    {
+        public static void MethodB (string msg) 
+        {
+            Console.WriteLine("Called ClassB.MethodB"+msg);
+        }
+
+    }
+    class ClassC 
+    {
+       public static void MethodC (string msg) 
+        
+        {
+            Console.WriteLine("Called ClassC.MethodC"+msg);
+        }
+    }
+    class ClassD
+    {
+        public static int MethodD()
+        {
+            return 100;
+        }
+
+    }
+    class ClassE
+    {
+        public static int MethodE() 
+        {
+            return 200;
+        }
+    }
+   
