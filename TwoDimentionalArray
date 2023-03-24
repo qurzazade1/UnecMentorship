@@ -1,0 +1,33 @@
+         1 Find sum of array elements
+          int[,] mynumbers = { { 1, 2, 3, 4, 5, 6 }, { 7,8,1,2,3,4} };
+            int sum = 0;
+           
+
+            for (int c = 0; c <mynumbers.GetLength(0); c++)
+            {
+                for (int d = 0; d <mynumbers.GetLength(1); d++)
+                {
+
+                    sum = sum + mynumbers[c,d];
+                    Console.WriteLine(sum);
+                }
+                
+            }
+            
+           2 Find average of min and max element of 2-dimentional array:
+             int[,] myarrays = { { 1, 3, 4, 7 }, { 10, 11, 14, 17 } };
+            int max = 0;
+            int min = 20;
+            for (int aa = 0; aa < myarrays.GetLength(0); aa++)
+             { 
+                for (int bb=0; bb< myarrays.GetLength(1); bb++)
+                {
+                    if (max < myarrays[aa, bb])
+                    { max = myarrays[aa, bb]; };
+                    if (min > myarrays[aa, bb])
+                    { min = myarrays[aa, bb];}
+                }
+             }
+            Console.WriteLine( (max+min)/2);
+            Console.ReadLine();
+
